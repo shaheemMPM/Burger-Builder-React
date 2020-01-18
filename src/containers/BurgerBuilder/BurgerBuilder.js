@@ -81,7 +81,9 @@ class BurgerBuilder extends Component {
         }
         const modalsec = this.state.purchasing ? 
                 <Modal modalClosed={this.purchaseCancelHandler}>
-                    <OrderSummary ingredients={this.state.ingredients}/>
+                    <OrderSummary 
+                        ingredients={this.state.ingredients}
+                        clicked={this.purchaseCancelHandler}/>
                 </Modal> : null;
 
         return ( 
