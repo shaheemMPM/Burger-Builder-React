@@ -13,15 +13,15 @@ const orderSummary = (props) => {
                         <span style={{textTransform: "capitalize"}}>
                             {igKey}
                         </span> : {props.ingredients[igKey]}
-                    </li>  
+                    </li>
                 );
             });
 
-    return ( 
+    return (
         <Aux>
             <h3>Order Summary</h3>
             <p>A Delicious Burger With Following Ingredients</p>
-            <ul>
+            <ul className="IngredientsList">
                 {IngredientSummary}
             </ul>
             <p><strong>Total Price : {props.price.toFixed(2)} $</strong></p>
@@ -30,5 +30,5 @@ const orderSummary = (props) => {
         </Aux>
      );
 }
- 
+
 export default orderSummary;
